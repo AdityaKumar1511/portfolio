@@ -1,0 +1,264 @@
+/* ================= GLOBAL ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body{
+    background:#fafafa;
+    color:#111;
+    scroll-behavior:smooth;
+    line-height:1.6;
+}
+
+.section{
+    padding:120px 8%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+    position:fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,0.8);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 20px rgba(0,0,0,0.04);
+    z-index:1000;
+}
+
+.logo{
+    font-weight:700;
+    font-size:20px;
+}
+
+.links{
+    display:flex;
+    gap:35px;
+}
+
+.links a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    position:relative;
+}
+
+.links a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-5px;
+    background:black;
+    transition:0.3s ease;
+}
+
+.links a:hover::after,
+.links a.active::after{
+    width:100%;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* ================= HOME ================= */
+#Home{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#Home h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+#Home h3{
+    font-weight:500;
+    color:#555;
+    margin-bottom:15px;
+}
+
+#Home p{
+    max-width:600px;
+    color:#666;
+}
+
+/* Button */
+button{
+    margin-top:30px;
+    padding:14px 32px;
+    border:none;
+    border-radius:40px;
+    font-weight:600;
+    background:black;
+    color:white;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+button:hover{
+    background:#222;
+    transform:translateY(-3px);
+}
+
+/* ================= ABOUT ================= */
+#About{
+    text-align:center;
+}
+
+#About p{
+    max-width:700px;
+    margin:20px auto 0;
+    color:#555;
+    font-size:17px;
+}
+
+/* ================= PROJECTS ================= */
+#Projects{
+    text-align:center;
+}
+
+.project-card{
+    background:white;
+    padding:35px;
+    margin:40px auto;
+    border-radius:18px;
+    max-width:650px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.05);
+    transition:0.3s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 45px rgba(0,0,0,0.08);
+}
+
+.project-card h3{
+    margin-bottom:10px;
+}
+
+.project-card p{
+    color:#555;
+    margin-bottom:8px;
+}
+
+.project-links{
+    margin-top:15px;
+}
+
+.project-links a{
+    text-decoration:none;
+    font-weight:600;
+    color:black;
+    border-bottom:2px solid black;
+    padding-bottom:2px;
+}
+
+/* ================= SKILLS ================= */
+#Skills{
+    text-align:center;
+}
+
+.skills-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:20px;
+}
+
+.skills-grid div{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.skills-grid div:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= CONTACT ================= */
+#Contact{
+    text-align:center;
+}
+
+#Contact p{
+    margin-top:10px;
+    color:#555;
+}
+
+.socials{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.socials a{
+    text-decoration:none;
+    font-weight:600;
+    color:black;
+    transition:0.3s ease;
+}
+
+.socials a:hover{
+    transform:translateY(-3px);
+}
+
+/* ================= FADE ANIMATION ================= */
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.8s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+    #Home h1{
+        font-size:34px;
+    }
+
+    .links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        right:8%;
+        background:white;
+        padding:25px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        border-radius:12px;
+    }
+
+    .links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+}
