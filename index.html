@@ -1,95 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Aditya Kumar | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Aditya Kumar | Software Engineer</title>
+    <!-- CSS and Fonts -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Aditya Kumar</div>
-        <div class="menu-toggle" id="menu-toggle">☰</div>
-        <div class="links" id="nav-links">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Skills">Skills</a>
-            <a href="#Contact">Contact</a>
+<body data-theme="dark">
+
+    <div class="cursor-dot" data-cursor></div>
+    <div class="cursor-outline" data-cursor></div>
+
+    <!-- 1. Intro Animation Overlay -->
+    <div class="intro-overlay" id="intro">
+        <div class="intro-wrapper">
+            <div class="intro-half intro-top"></div>
+            <div class="intro-half intro-bottom"></div>
+            <div class="sword-flash"></div>
+        </div>
+    </div>
+
+    <!-- 2. Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <a href="#home">Adi<span>.</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link"><span>01.</span> About</a></li>
+            <li><a href="#experience" class="nav-link"><span>02.</span> Experience</a></li>
+            <li><a href="#projects" class="nav-link"><span>03.</span> Projects</a></li>
+            <li><a href="#contact" class="nav-link"><span>04.</span> Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <i class="fas fa-sun toggle-icon"></i>
+            </button>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </nav>
 
-    <!-- Home -->
-    <section id="Home" class="section">
-        <h1>Hi, I'm Aditya Kumar</h1>
-        <h3>B.Tech CSE | NIT Patna (2025–2029)</h3>
-        <p>Passionate about Web Development, Problem Solving & Building Scalable Applications</p>
-        <button id="viewWorkBtn">View My Work</button>
-    </section>
+    <!-- Main Content -->
+    <main id="main-content" class="hidden">
 
-    <!-- About -->
-    <section id="About" class="section fade">
-        <h2>About Me</h2>
-        <p>
-            I'm a Computer Science student at NIT Patna with a CGPA of 8.6.
-            I enjoy building responsive web applications and solving algorithmic problems.
-            I'm active on LeetCode and continuously improving my problem-solving skills.
-        </p>
-    </section>
-
-    <!-- Projects -->
-    <section id="Projects" class="section fade">
-        <h2>Projects</h2>
-
-        <div class="project-card">
-            <h3>Robotics Club Website</h3>
-            <p>Responsive website for managing club events and members.</p>
-            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links">
-                <a href="https://robotics-club-website-f4ca8.web.app/" target="_blank">Live</a>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-content">
+                <p class="greeting slide-up fade-in">Hi, my name is</p>
+                <h1 class="name slide-up fade-in delay-1">Aditya Kumar.</h1>
+                <h2 class="role slide-up fade-in delay-2">I build <span class="gradient-text">stunning digital
+                        experiences.</span></h2>
+                <p class="summary slide-up fade-in delay-3">
+                    B.Tech Computer Science student at <span class="highlight">NIT Patna</span> (2025-2029).
+                    I specialize in Web Development, C++, and Java. I love creating beautiful, accessible, and
+                    human-centered products.
+                </p>
+                <div class="cta-buttons slide-up fade-in delay-4">
+                    <a href="#projects" class="btn primary-btn">Check out my work! <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
-        </div>
-
-        <div class="project-card">
-            <h3>Stubble Connect</h3>
-            <p>Platform for buying and selling agricultural stubble.</p>
-            <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-links">
-                <a href="https://stubbleconnect.web.app/" target="_blank">Live</a>
+            <div class="hero-image slide-in-right fade-in delay-3">
+                <div class="image-wrapper">
+                    <!-- Replace the placeholder below once you place your image in assets -->
+                    <img src="assets/profile.png" alt="Aditya Kumar"
+                        onerror="this.src='https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=600&auto=format&fit=crop'"
+                        id="profile-pic">
+                    <div class="image-backdrop"></div>
+                </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <h2 class="section-title fade-in-scroll"><span>01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in-scroll">
+                    <p>Hello! I'm Aditya, a passionate developer studying Computer Science and Engineering at the
+                        National Institute of Technology (NIT) Patna.</p>
+                    <p>My journey into technology started with an intense curiosity for how websites operate, leading me
+                        to delve into HTML, CSS, and Javascript. Now, I focus on building accessible, inclusive products
+                        and digital experiences.</p>
+                    <p>Here are a few technologies I've been working with recently:</p>
+                    <ul class="tech-list">
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>HTML5 / CSS3</li>
+                        <li>Git / GitHub</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+                <!-- Interactive 3D/Hover Element -->
+                <div class="about-visual fade-in-scroll">
+                    <div class="glass-card gpa-card">
+                        <i class="fas fa-graduation-cap highlight-icon"></i>
+                        <h3>CGPA</h3>
+                        <p class="big-number">8.6</p>
+                        <p class="subtext">NIT Patna</p>
+                    </div>
+                    <div class="glass-card leetcode-card">
+                        <i class="fas fa-code highlight-icon"></i>
+                        <h3>Problem Solving</h3>
+                        <p class="big-number">50+</p>
+                        <p class="subtext">LeetCode Solved</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Skills -->
-    <section id="Skills" class="section fade">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>JavaScript</div>
-            <div>C++</div>
-            <div>Java</div>
-            <div>Git</div>
-            <div>GitHub</div>
-            <div>Problem Solving (LeetCode 50+)</div>
-        </div>
-    </section>
+        <!-- Experience & Education Section -->
+        <section id="experience" class="experience section">
+            <h2 class="section-title fade-in-scroll"><span>02.</span> Experience & Education</h2>
 
-    <!-- Contact -->
-    <section id="Contact" class="section fade">
-        <h2>Contact Me</h2>
-        <p>Email: aditya.kumar00706@gmail.com</p>
-        <div class="socials">
-            <a href="https://github.com/AdityaKumar1511" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/aditya-kumar-57a988374" target="_blank">LinkedIn</a>
-            <a href="https://leetcode.com/u/Adi_2007/" target="_blank">LeetCode</a>
-        </div>
-        <p>© 2026 Aditya Kumar</p>
-    </section>
+            <div class="timeline">
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <h3>B.Tech in Computer Science</h3>
+                        <h4>National Institute of Technology (NIT) Patna</h4>
+                        <p class="timeline-date">2025 - 2029</p>
+                        <ul class="timeline-desc">
+                            <li>Currently pursuing B.Tech in Computer Science and Engineering.</li>
+                            <li>Maintaining a CGPA of 8.6.</li>
+                        </ul>
+                    </div>
+                </div>
 
-<script src="script.js"></script>
+                <div class="timeline-item fade-in-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-panel">
+                        <h3>Hackathons & Problem Solving</h3>
+                        <h4>Achievements</h4>
+                        <p class="timeline-date">Present</p>
+                        <ul class="timeline-desc">
+                            <li>Participated in the GDG TechSprint Hackathon, collaborating on innovative tech
+                                solutions.</li>
+                            <li>Active problem solver with 50+ problems solved on LeetCode.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <h2 class="section-title fade-in-scroll"><span>03.</span> Some Things I've Built</h2>
+            <div class="project-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card fade-in-scroll">
+                    <div class="project-content">
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title"><a href="https://robotics-club-website-f4ea8.web.app"
+                                target="_blank">Robotics Club Website</a></h3>
+                        <div class="project-description glass-panel">
+                            <p>A fully responsive website designed to manage club events and members. Features
+                                structured pages for event updates and member information, built with a mobile-first
+                                philosophy.</p>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase Hosting</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/AdityaKumar1511/robotics-club-website.git" target="_blank"
+                                aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                            <a href="https://robotics-club-website-f4ea8.web.app" target="_blank"
+                                aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card fade-in-scroll">
+                    <div class="project-content">
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title"><a href="https://stubbleconnect.web.app" target="_blank">Stubble
+                                Connect</a></h3>
+                        <div class="project-description glass-panel">
+                            <p>A responsive platform developed for buying and selling agricultural stubble. Includes
+                                separate, clean user interfaces for both farmers and buyers to facilitate seamless
+                                transactions.</p>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase Hosting</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/AdityaKumar1511/Stubble_Connect.git" target="_blank"
+                                aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                            <a href="https://stubbleconnect.web.app" target="_blank" aria-label="External Link"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <section id="contact" class="contact section">
+            <h2 class="section-title fade-in-scroll"><span>04.</span> What's Next?</h2>
+            <h3 class="contact-heading fade-in-scroll">Get In Touch</h3>
+            <p class="contact-desc fade-in-scroll">Whether you have a question or just want to say hi, I'll try my best
+                to get back to you! Currently exploring new opportunities.</p>
+
+            <div class="contact-actions fade-in-scroll">
+                <button id="say-hello-btn" class="btn primary-btn" data-email="aditya.kumar00706@gmail.com">
+                    <i class="far fa-envelope"></i> Say Hello
+                </button>
+
+                <div class="social-links">
+                    <a href="https://github.com/AdityaKumar1511" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-kumar-57a988374/" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://leetcode.com/u/Adi_2007/" target="_blank" aria-label="LeetCode"><i
+                            class="fas fa-code"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Designed & Built by Aditya Kumar</p>
+        </footer>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i> Email copied to clipboard!
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
